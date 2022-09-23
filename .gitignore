@@ -1,0 +1,5 @@
+*.pkl
+*.ipynb
+__pycache__/*
+PipelineV0
+data

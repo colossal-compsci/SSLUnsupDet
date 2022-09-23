@@ -1,0 +1,98 @@
+{
+    "dataset": {
+        "window": 0.5,
+        "wavs_path": "data/wavs48khz/*.wav",
+        "sample_rate": 48000,
+        "window_pad": 136,
+        "train_samples": 12500,
+        "val_samples": 3125,
+        "seed": 42,
+        "epsilon": 2e-6
+    },
+    "model": {
+        "preprocess_params": {
+            "filter_params": {
+                "cutoff_freq": 3000,
+                "sample_rate": 48000,
+                "b": 0.08,
+                "ramp_duration": 0.002
+            }
+        },
+        "transform_params": {
+            "name": "conv1d",
+            "params": {
+                "encoder_name": "conv1d_layers",
+                "kernel_size": 136,
+                "stride": 48,
+                "affine": true,
+                "bias": true,
+                "out_channels": 128,
+                "center": false,
+                "double_channels": false,
+                "layers": null
+            }
+        },
+        "postprocess_params":{
+            "mlp_params": {
+                "dropout": 0,
+                "out_dimension": 32,
+                "linear_projection":  true
+           },
+           "output_activation": "tanh"
+        }  
+    },
+    "training": {
+        "optimizer": {
+            "name": "SGD",
+            "learning_rate": 0.0001,
+            "momentum": 0.9
+        },
+        "batch_size": 64,
+        "epochs": 50,
+        "verbose": 1,
+        "device": "cuda",
+        "scheduler" : null,
+        "params": {
+            "model_saver_callback": {
+                "epoch": 1,
+                "save_every" : 1
+            }
+        }
+    },
+    "inference": {
+        "coarse": {
+            "alpha": [0.1, 1.1, 0.1],
+            "beta": [-1, 1.1, 0.1],
+            "smooth_duration": [0, 30, 5]
+        },
+        "fine" : {
+            "alpha": [0.01, 0.21, 0.01],
+            "beta": [0.8, 1.01, 0.01],
+            "smooth_duration": [0, 11, 1]
+        },
+        "duration_threshold": 30
+    },
+    "detection": {
+        "coarse": {
+            "prominence": [0.05, 0.8, 0.05]
+        },
+        "fine": {
+            "prominence": [0.01, 0.21, 0.01]
+        }
+    },
+    "energy_baseline": {
+        "coarse": {
+            "prominence": [0.05, 0.8, 0.05]
+        },
+        "fine": {
+            "prominence": [0.001, 0.101, 0.001]
+        }
+    },
+    "metrics" : {
+        "tolerance" : [0.005, 0.01, 0.02],
+        "coarsen": [0.005, 0.01, 0.02]
+    },
+    "utils": {
+        "save_dir": "PipelineV0"
+    }
+}
