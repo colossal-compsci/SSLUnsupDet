@@ -12,6 +12,19 @@ While deep learning has revolutionized ecological data analysis, existing strate
 
 ## Usage
 
+### Clone Repositroy
+
+```
+git clone https://github.com/colossal-compsci/SSLUnsupDet.git
+cd SSLUnsupDet
+```
+
+### Setup Environment
+
+```
+pip install -r requirements.txt
+```
+
 ### Data Structure
 
 The detection training and inference pipeline assumes the data is structured as follows:
