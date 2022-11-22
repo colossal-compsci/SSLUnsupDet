@@ -37,3 +37,10 @@ data
 └───selections
     └─  *.selections.txt
 ```
+
+### Configuration
+### Training
+
+```
+python train.py -c config.json
+```
