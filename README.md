@@ -42,5 +42,22 @@ data
 ### Training
 
 ```
-python train.py -c config.json
+python train.py
+```
+
+### Inference
+
+```
+python inference.py
+```
+
+### Peak Detection
+
+```
+python peak_detect.py
+```
+
+### Processing Results
+```
+python results.py
 ```
