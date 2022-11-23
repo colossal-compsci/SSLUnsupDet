@@ -40,12 +40,19 @@ data
 
 ### Configuration
 
-Prior to training and inferencing a model, it might be necessary to modify the configuration in ```configs/config.json```.
+Prior to training and inferencing a model, it might be necessary to modify the configuration in ```configs/config.json```. For a given dataset, it is particularly important to specify "dataset" and "model" parameters. Default "training" parameters, in general, serve as a functional baseline.
 
 ### Training
 
 ```
 python train.py
+```
+
+Command-line flags are as follows:
+
+```
+-c --config name of the config json
+-s --seed (optional) random seed
 ```
 
 ### Inference
