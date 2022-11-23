@@ -39,6 +39,9 @@ data
 ```
 
 ### Configuration
+
+Prior to training and inferencing a model, it might be necessary to modify the configuration in ```configs/config.json```.
+
 ### Training
 
 ```
