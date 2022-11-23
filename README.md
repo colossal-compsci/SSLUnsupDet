@@ -51,7 +51,7 @@ python train.py
 Command-line flags are as follows:
 
 ```
--c --config name of the config json
+-c --config name of the config JSON
 -s --seed (optional) random seed
 ```
 
@@ -61,13 +61,57 @@ Command-line flags are as follows:
 python inference.py
 ```
 
+Command-line flags are as follows:
+
+```
+-c --config name of the config JSON
+-ckpt --checkpoint epoch of serialized model checkpoint 
+-s --search carry out 'coarse' or 'fine' grid search mode
+```
+
 ### Peak Detection
 
 ```
 python peak_detect.py
 ```
 
+Command-line flags are as follows:
+
+```
+-c --config name of the config JSON
+-ckpt --checkpoint epoch of serialized model checkpoint 
+-q --use_q bool to use uncertain (q) selection tables
+-s --search carry out 'coarse' or 'fine' grid search mode
+```
+
+### Energy Amplitude-Based Peak Detection
+
+```
+python energy_detect.py
+```
+
+Command-line flags are as follows:
+
+```
+-c --config name of the config JSON
+-ckpt --checkpoint epoch of serialized model checkpoint 
+-q --use_q bool to use uncertain (q) selection tables
+-s --search carry out 'coarse' or 'fine' grid search mode
+-h --hpf implement high pass filter noise reduction
+```
+
 ### Processing Results
 ```
 python results.py
+```
+
+Command-line flags are as follows:
+
+```
+-c --config name of the config JSON
+-ckpt --checkpoint epoch of serialized model checkpoint 
+-q --use_q bool to use uncertain (q) selection tables
+-s --search carry out 'coarse' or 'fine' grid search mode
+-hpf --use_hpf implement high pass filter noise reduction
+-e --compute_energy bool to compute energy amplitude-based detections
 ```
