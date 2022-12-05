@@ -12,7 +12,19 @@ While deep learning has revolutionized ecological data analysis, existing strate
 
 ## Contents
 
-- ```preprocess.py``` Preprocessing the .wav files
+- ```preprocess.py``` Preprocessing the Watkins sperm whale .wav files to get .wav info
+- ```dataset.py``` PyTorch dataset to select training/validation segments
+- ```layers.py``` PyTorch layers (nn.Module) used during model construction
+- ```models.py``` PyTorch model (nn.Module) comprising the spectral boundary encoder
+- ```losses.py``` The contrastive learning objective used as the loss function during model training
+- ```metrics.py``` Metrics (P, R, F1, r, P_det, P_FA) used during inference and a metric based on the contrastive learning objective
+- ```PyFire.py``` Custom-written general-purpose training loop using the Trainer object
+- ```train.py``` Pipeline for instantiating and training models
+- ```inference.py``` Using the trained model, encode the waveforms to the learned representation
+- ```peak_detect.py``` Using the outputs of ```inference.py```, compute peaks in the dissimilarity metric
+- ```energy_detect.py``` Compute the baseline detections based on energy amplitude
+- ```results.py``` Evaluate the P, R, F1, r, P_det, P_FA metrics
+- ```utils.py``` Miscellaneous utility functions
 
 ## Usage
 
