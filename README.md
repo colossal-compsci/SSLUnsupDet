@@ -27,6 +27,8 @@ pip install -r requirements.txt
 
 ### Data
 
+The sperm whale click data are extracted from the ‘Best Of’ cuts from the [Watkins Marine Mammal Sound Database, Woods Hole Oceanographic Institution, and the New Bedford Whaling Museum](https://cis.whoi.edu/science/B/whalesounds/index.cfm).
+
 ### Data Structure
 
 The detection training and inference pipeline assumes the data is structured as follows:
