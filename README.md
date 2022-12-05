@@ -25,6 +25,8 @@ cd SSLUnsupDet
 pip install -r requirements.txt
 ```
 
+### Data
+
 ### Data Structure
 
 The detection training and inference pipeline assumes the data is structured as follows:
