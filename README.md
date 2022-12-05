@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ### Data
 
-The sperm whale click data are extracted from the ‘Best Of’ cuts from the [Watkins Marine Mammal Sound Database, Woods Hole Oceanographic Institution, and the New Bedford Whaling Museum](https://cis.whoi.edu/science/B/whalesounds/index.cfm). We host .wav acoustic files used in the study (of which 71 exceed the 0.5s window width) and 42 .txt selection tables (of which 4 are consider to be of questionable certainty labeled by '.q.') in a Google storage [bucket](https://console.cloud.google.com/storage/browser/wmmsd-pmacro-bestof). The bengalese finch data from Nicholson et al. 2017 are available from [figshare](https://doi.org/10.6084/M9.figshare.4805749.V5).
+The sperm whale click data are extracted from the ‘Best Of’ cuts from the [Watkins Marine Mammal Sound Database, Woods Hole Oceanographic Institution, and the New Bedford Whaling Museum](https://cis.whoi.edu/science/B/whalesounds/index.cfm). We host .wav acoustic files used in the study (of which 71 exceed the 0.5s window width) and 42 .txt selection tables (of which 4 are consider to be of questionable certainty labeled by '.q.') in a Google storage [bucket](https://console.cloud.google.com/storage/browser/wmmsd-pmacro-bestof). The bengalese finch data from Nicholson et al., 2017 are available from [figshare](https://doi.org/10.6084/M9.figshare.4805749.V5). The green sea turtle data from Jeantet et al., 2020 are available in [Dryad](https://doi.org/10.5061/dryad.hhmgqnkd9). The embryo development data from Cicconet et al., 2014 available [online](http://celltracking.bio.nyu.edu/).
 
 ### Data Structure
 
